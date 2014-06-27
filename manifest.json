@@ -1,0 +1,24 @@
+{
+   "manifest_version": 2,
+   "name": "Itntn for tumblr Extension",
+   "version": "0.1",
+   "description": "Show me the itntn contens.",
+   "content_scripts": [{
+      "matches": ["http://*/*"],
+           "js":["jquery.min11.js"], 
+           "run_at": "document_end"
+           }],
+   "icons": { "128": "i.png" },
+   "background": {
+        "persistent": false,
+        "scripts": ["itntn.js"]
+    },
+    "browser_action": {
+          "default_icon": { 
+            "19": "i.png", 
+            "38": "i.png"  
+          },
+          "default_title": "아이튼튼 "
+        },
+   "permissions": ["http://*.tumblr.com/", "https://*.tumblr.com/", "debugger" ]
+}
